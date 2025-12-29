@@ -1,1 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="Women Safety Emergency App - Quick access to emergency help, fake calls, loud alarms, and safety resources">
+    <title>Women Safety App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main App Container -->
+    <div id="app" class="app">
+        <!-- Hero Section -->
+        <header class="hero gradient-hero">
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <!-- Logo -->
+                    <div class="logo-circle">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
 
+                    <h1 class="hero-title">Women <span class="text-gradient">Safety</span> App</h1>
+                    <p class="hero-description">Your safety companion. Quick access to emergency help, fake calls, loud alarms, and safety resources.</p>
+
+                    <!-- Emergency Button -->
+                    <button id="emergencyBtn" class="btn btn-emergency btn-xl pulse-emergency">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="12"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16"/>
+                        </svg>
+                        EMERGENCY
+                    </button>
+                </div>
+            </div>
+            <!-- Decorative elements -->
+            <div class="hero-blur-1"></div>
+            <div class="hero-blur-2"></div>
+        </header>
+
+        <!-- Quick Actions -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Quick Actions</h2>
+                    <p class="section-description">Instant safety features at your fingertips</p>
+                </div>
+
+                <div class="quick-actions-grid">
+                    <button id="fakeCallBtn" class="action-card">
+                        <div class="action-icon bg-primary-light text-primary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <h3>Fake Call</h3>
+                        <p>Simulate incoming call</p>
+                    </button>
+
+                    <button id="alarmBtn" class="action-card">
+                        <div class="action-icon bg-warning-light text-warning">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                            </svg>
+                        </div>
+                        <h3>Loud Alarm</h3>
+                        <p>Attract attention</p>
+                    </button>
+
+                    <button id="tipsBtn" class="action-card">
+                        <div class="action-icon bg-accent-light text-accent">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
+                        <h3>Safety Tips</h3>
+                        <p>Learn guidelines</p>
+                    </button>
+
+                    <button id="helplinesBtn" class="action-card">
+                        <div class="action-icon bg-safe-light text-safe">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3>Helplines</h3>
+                        <p>Emergency numbers</p>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safety Tips Section -->
+        <section id="tips" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Safety Tips</h2>
+                    <p class="section-description">Select a situation to view safety guidelines</p>
+                </div>
+
+                <div class="situation-buttons" id="situationButtons">
+                    <!-- Buttons will be generated by JS -->
+                </div>
+
+                <div class="tips-card" id="tipsCard">
+                    <div id="tipsContent" class="tips-placeholder">
+                        <svg class="icon-large text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"/>
+                        </svg>
+                        <p>Select a situation above to view safety tips</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Helplines Section -->
+        <section id="helplines" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Emergency Helplines</h2>
+                    <p class="section-description">State-wise emergency contact numbers</p>
+                </div>
+
+                <div class="state-selector">
+                    <svg class="icon-small text-muted" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <select id="stateSelect" class="select">
+                        <!-- Options will be generated by JS -->
+                    </select>
+                </div>
+
+                <div class="helpline-grid" id="helplineGrid">
+                    <!-- Cards will be generated by JS -->
+                </div>
+
+                <!-- National Helplines -->
+                <div class="national-helplines">
+                    <h3>National Emergency Numbers</h3>
+                    <div class="national-numbers">
+                        <div class="national-badge">
+                            <span class="label">All Emergency:</span>
+                            <span class="number text-emergency">112</span>
+                        </div>
+                        <div class="national-badge">
+                            <span class="label">Women NCW:</span>
+                            <span class="number text-primary">7827-170-170</span>
+                        </div>
+                        <div class="national-badge">
+                            <span class="label">Child:</span>
+                            <span class="number text-safe">1098</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-brand">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <span>Women Safety App</span>
+                </div>
+                <p>Stay safe, stay aware. Your safety is our priority.</p>
+                <p class="footer-note">Works offline once loaded. All data stored locally.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Emergency Screen Modal -->
+    <div id="emergencyScreen" class="modal hidden">
+        <div class="emergency-modal">
+            <div class="emergency-header">
+                <div class="location-badge">
+                    <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span id="emergencyState">Delhi</span>
+                </div>
+                <button id="closeEmergency" class="btn-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="emergency-title">
+                <h1>Emergency Mode</h1>
+                <p>Choose an action below</p>
+            </div>
+
+            <div class="emergency-actions">
+                <button id="emergencyFakeCall" class="emergency-action-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span>Fake Call</span>
+                </button>
+                <button id="emergencyAlarm" class="emergency-action-btn warning">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    </svg>
+                    <span>Loud Alarm</span>
+                </button>
+            </div>
+
+            <div class="emergency-helplines">
+                <h2>Emergency Helplines</h2>
+                <div class="emergency-helpline-grid" id="emergencyHelplineGrid">
+                    <!-- Will be generated by JS -->
+                </div>
+            </div>
+
+            <p class="emergency-footer-text">Stay calm. Help is available 24/7.</p>
+        </div>
+    </div>
+
+    <!-- Fake Call Modal -->
+    <div id="fakeCallScreen" class="modal hidden">
+        <div class="fake-call-modal">
+            <div class="caller-info">
+                <div class="caller-avatar" id="callerAvatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                </div>
+                <h2 class="caller-name">Mom</h2>
+                <p class="call-status" id="callStatus">Incoming call...</p>
+            </div>
+
+            <div class="call-actions" id="callActions">
+                <!-- Will be generated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Alarm Modal -->
+    <div id="alarmScreen" class="modal hidden">
+        <div class="alarm-modal" id="alarmModal">
+            <div class="alarm-content">
+                <div class="alarm-icon" id="alarmIcon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                    </svg>
+                </div>
+                <h1 id="alarmTitle">ALARM ACTIVE</h1>
+                <p id="alarmDescription">Loud alarm is playing to attract attention</p>
+
+                <div class="alarm-buttons">
+                    <button id="toggleAlarm" class="btn btn-secondary btn-xl">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                            <line x1="23" y1="9" x2="17" y2="15"/>
+                            <line x1="17" y1="9" x2="23" y2="15"/>
+                        </svg>
+                        Pause
+                    </button>
+                    <button id="closeAlarm" class="btn btn-outline btn-xl">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18"/>
+                            <line x1="6" y1="6" x2="18" y2="18"/>
+                        </svg>
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="emergency.js"></script>
+    <script src="fakeCall.js"></script>
+    <script src="alarm.js"></script>
+</body>
+</html>
